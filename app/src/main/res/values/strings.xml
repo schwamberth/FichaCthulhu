@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">FichaCthulhu</string>
+    <string-array name="skills_gerais">
+        <item>Arqueologia</item>
+        <item>Arremessar</item>
+        <item>Arte e Ofício</item>
+        <item>Avaliação</item>
+        <item>Cavalgar</item>
+        <item>Charme</item>
+        <item>Chaveiro</item>
+        <item>Ciência</item>
+        <item>Consertos Elétricos</item>
+        <item>Consertos Mecânicos</item>
+        <item>Contabilidade</item>
+        <item>Direito</item>
+        <item>Dirigir Automóveis</item>
+        <item>Disfarce</item>
+        <item>Encontrar</item>
+        <item>Escalar</item>
+        <item>Escutar</item>
+        <item>Esquivar</item>
+        <item>Furtividade</item>
+        <item>História</item>
+        <item>Intimidação</item>
+        <item>Lábia</item>
+        <item>Língua Nativa</item>
+        <item>Língua (Outra)</item>
+        <item>Lutar (Briga)</item>
+        <item>Medicina</item>
+        <item>Mythos de Cthulhu</item>
+        <item>Mundo Natural</item>
+        <item>Natação</item>
+        <item>Navegação</item>
+        <item>Nível de Crédito</item>
+        <item>Ocultismo</item>
+        <item>Operar Máquinário</item>
+        <item>Persuasão</item>
+        <item>Pilotar</item>
+        <item>Pistolas</item>
+        <item>Prestidigitação</item>
+        <item>Primeiros Socorros</item>
+        <item>Psicanálise</item>
+        <item>Psicologia</item>
+        <item>Rastrear</item>
+        <item>Rifles/Espingardas</item>
+        <item>Saltar</item>
+        <item>Sobrevivência</item>
+        <item>Usar Bibliotecas</item>
+    </string-array>
+    <string-array name="skills_armas_fogo">
+        <item>Espingarda</item>
+        <item>Metralhadora</item>
+        <item>Pistola</item>
+        <item>Rifle</item>
+        <item>Sub-Metralhadora</item>
+    </string-array>
+    <string-array name="ocupacoes">
+        <item>Advogado</item>
+        <item>Andarilho</item>
+        <item>Antiquário</item>
+        <item>Artista</item>
+        <item>Atleta</item>
+        <item>Autor</item>
+        <item>Bibliotecário</item>
+        <item>Membro do Clero</item>
+        <item>Criminoso</item>
+        <item>Detetive Particular</item>
+        <item>Diletante</item>
+        <item>Engenheiro</item>
+        <item>Fanático</item>
+        <item>Fazendeiro</item>
+        <item>Hacker</item>
+        <item>Investigador de Polícia</item>
+        <item>Jornalista</item>
+        <item>Médico</item>
+        <item>Membro de Tribo</item>
+        <item>Missionário</item>
+        <item>Músico</item>
+        <item>Oficial de Polícia</item>
+        <item>Oficial Militar</item>
+        <item>Parapsicólogo</item>
+        <item>Piloto</item>
+        <item>Professor</item>
+        <item>Profissional de Entretenimento</item>
+        <item>Soldado</item>
+        <item>Outros</item>
+    </string-array>
+
+</resources>

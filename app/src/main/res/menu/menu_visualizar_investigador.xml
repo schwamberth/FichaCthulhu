@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_menu_salvar"
+        android:icon="@drawable/ic_save"
+        android:title="Salvar Personagem"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item_menu_abrir_skills"
+        android:icon="@drawable/ic_playlist"
+        android:title="Abrir Skills"
+        app:showAsAction="ifRoom" />
+</menu>

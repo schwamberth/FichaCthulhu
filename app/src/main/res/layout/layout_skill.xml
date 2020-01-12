@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="skillDTO"
+            type="br.com.fichacthulhu.model.Skill" />
+
+        <variable
+            name="onClickEvoluirListener"
+            type="br.com.fichacthulhu.OnClickListener" />
+
+        <variable
+            name="onClickSomarListener"
+            type="br.com.fichacthulhu.OnClickListener" />
+
+        <variable
+            name="onClickSubtrairListener"
+            type="br.com.fichacthulhu.OnClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:background="#000000"
+            android:tint="#FFFFFF"
+            android:visibility="@{onClickSubtrairListener != null ? View.VISIBLE : View.GONE}"
+            android:onClick="@{(v) -> onClickSubtrairListener.onClick(skillDTO)}"
+            android:src="@drawable/ic_remove"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:visibility="@{skillDTO.evoluir == false ? View.VISIBLE : View.GONE}"
+            android:onClick="@{(v) -> onClickEvoluirListener.onClick(skillDTO)}"
+            android:src="@drawable/ic_desmarcado"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:visibility="@{skillDTO.evoluir == true ? View.VISIBLE : View.GONE}"
+            android:onClick="@{(v) -> onClickEvoluirListener.onClick(skillDTO)}"
+            android:src="@drawable/ic_marcado"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@{skillDTO.descricao}"
+                android:textSize="25sp"
+                tools:text="Arqueologia" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:background="@xml/back_arredondado"
+                android:orientation="horizontal">
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@xml/back_arredondado"-->
+<!--                android:orientation="horizontal">-->
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:text='@{String.valueOf(skillDTO.pontos)}'
+                    android:textSize="20sp"
+                    android:layout_gravity="center"
+                    android:lines="1"
+                    tools:text="6" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text='@{String.valueOf(skillDTO.meio)}'
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_gravity="center"
+                        android:lines="1"
+                        tools:text="3"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text='@{String.valueOf(skillDTO.quinto)}'
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:lines="1"
+                        tools:text="1"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:background="#000000"
+                android:tint="#FFFFFF"
+                android:visibility="@{onClickSomarListener != null ? View.VISIBLE : View.GONE}"
+                android:onClick="@{(v) -> onClickSomarListener.onClick(skillDTO)}"
+                android:src="@drawable/ic_add"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

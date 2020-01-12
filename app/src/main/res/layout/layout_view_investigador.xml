@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="org.apache.commons.lang3.StringUtils"/>
+
+        <variable
+            name="investigadorDTO"
+            type="br.com.fichacthulhu.InvestigadorDTO" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@xml/back_black"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:fontFamily="@font/arbutus"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Investigador"
+                    android:textColor="#FFFFFFFF" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nome:" />
+
+                    <TextView
+                        android:id="@+id/textViewNome"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:text='@{investigadorDTO.nome}'
+                        tools:text="João das Couves"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ocupação:" />
+
+                    <TextView
+                        android:id="@+id/textViewOcupacao"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:text='@{investigadorDTO.ocupacao}'
+                        tools:text="Advogado"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Idade:" />
+
+                    <TextView
+                        android:id="@+id/textViewIdade"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:layout_marginStart="5dp"
+                        android:text='@{investigadorDTO.idade}'
+                        tools:text="Advogado"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Idade:" />
+
+                    <TextView
+                        android:id="@+id/textViewSexo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:text='@{investigadorDTO.sexo}'
+                        tools:text="37"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Residência:" />
+
+                    <TextView
+                        android:id="@+id/textViewResidencia"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:text='@{investigadorDTO.residencia}'
+                        tools:text="Londres"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Local Nasc:" />
+
+                    <TextView
+                        android:id="@+id/textViewLocalNascimento"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:text='@{investigadorDTO.localNascimento}'
+                        tools:text="Londres"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@xml/back_black"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:fontFamily="@font/arbutus"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Atributos"
+                    android:textColor="#FFFFFFFF" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="FOR"
+                            android:textAlignment="viewEnd"
+                            android:textSize="25sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@xml/back_arredondado"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textViewLocalForca"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:text='@{investigadorDTO.forca}'
+                                android:textSize="25sp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_gravity="center"
+                                tools:text="80"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textViewLocalForcaMeio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_gravity="center"
+                                    android:padding="1dp"
+                                    android:text='@{investigadorDTO.forcaMeio}'
+                                    tools:text="16" />
+
+                                <TextView
+                                    android:id="@+id/textViewLocalForcaQuinto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_gravity="center"
+                                    android:padding="1dp"
+                                    android:text='@{investigadorDTO.forcaQuinto}'
+                                    tools:text="4" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="DES"
+                            android:textAlignment="viewEnd"
+                            android:textSize="25sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@xml/back_arredondado"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textViewLocalDestreza"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:text='@{investigadorDTO.destreza}'
+                                android:textSize="25sp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_gravity="center"
+                                tools:text="80"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textViewLocalDestrezaMeio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:text='@{investigadorDTO.destrezaMeio}'
+                                    android:layout_gravity="center"
+                                    android:padding="1dp"
+                                    tools:text="16" />
+
+                                <TextView
+                                    android:id="@+id/textViewLocalDestrezaQuinto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:text='@{investigadorDTO.destrezaQuinto}'
+                                    android:layout_gravity="center"
+                                    android:padding="1dp"
+                                    tools:text="4" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="INT"
+                            android:textAlignment="viewEnd"
+                            android:textSize="25sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@xml/back_arredondado"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textViewLocalInteligencia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:text='@{investigadorDTO.inteligencia}'
+                                android:textSize="25sp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_gravity="center"
+                                tools:text="80"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textViewLocalInteligenciaMeio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:text='@{investigadorDTO.inteligenciaMeio}'
+                                    android:layout_gravity="center"
+                                    android:padding="1dp"
+                                    tools:text="16" />
+
+                                <TextView
+                                    android:id="@+id/textViewLocalInteligenciaQuinto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:text='@{investigadorDTO.inteligenciaQuinto}'
+                                    android:layout_gravity="center"
+                                    android:padding="1dp"
+                                    tools:text="4" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="CON"
+                            android:textAlignment="viewEnd"
+                            android:textSize="25sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@xml/back_arredondado"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textViewLocalConstituicao"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:text='@{investigadorDTO.constituicao}'
+                                android:textSize="25sp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_gravity="center"
+                                tools:text="80"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textViewLocalConstituicaoMeio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_gravity="center"
+                                    android:text='@{investigadorDTO.constituicaoMeio}'
+                                    android:padding="1dp"
+                                    tools:text="16" />
+
+                                <TextView
+                                    android:id="@+id/textViewLocalConstituicaoQuinto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_gravity="center"
+                                    android:text='@{investigadorDTO.constituicaoQuinto}'
+                                    android:padding="1dp"
+                                    tools:text="4" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="APA"
+                            android:textAlignment="viewEnd"
+                            android:textSize="25sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@xml/back_arredondado"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textViewLocalAparencia"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:text='@{investigadorDTO.aparencia}'
+                                android:textSize="25sp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_gravity="center"
+                                tools:text="80"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textViewLocalAparenciaMeio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:text='@{investigadorDTO.aparenciaMeio}'
+                                    android:layout_gravity="center"
+                                    android:padding="1dp"
+                                    tools:text="16" />
+
+                                <TextView
+                                    android:id="@+id/textViewLocalAparenciaQuinto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:text='@{investigadorDTO.aparenciaQuinto}'
+                                    android:layout_gravity="center"
+                                    android:padding="1dp"
+                                    tools:text="4" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="POD"
+                            android:textAlignment="viewEnd"
+                            android:textSize="25sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@xml/back_arredondado"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textViewLocalPoder"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:text='@{investigadorDTO.poder}'
+                                android:textSize="25sp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_gravity="center"
+                                tools:text="80"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textViewLocalPoderMeio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:text='@{investigadorDTO.poderMeio}'
+                                    android:layout_gravity="center"
+                                    android:padding="1dp"
+                                    tools:text="16" />
+
+                                <TextView
+                                    android:id="@+id/textViewLocalPoderQuinto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:text='@{investigadorDTO.poderQuinto}'
+                                    android:layout_gravity="center"
+                                    android:padding="1dp"
+                                    tools:text="4" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TAM"
+                            android:textAlignment="viewEnd"
+                            android:textSize="25sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@xml/back_arredondado"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textViewLocalTamanho"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:text='@{investigadorDTO.tamanho}'
+                                android:textSize="25sp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_gravity="center"
+                                tools:text="80"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textViewLocalTamanhoMeio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_gravity="center"
+                                    android:text='@{investigadorDTO.tamanhoMeio}'
+                                    android:padding="1dp"
+                                    tools:text="16" />
+
+                                <TextView
+                                    android:id="@+id/textViewLocalTamanhoQuinto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_gravity="center"
+                                    android:text='@{investigadorDTO.tamanhoQuinto}'
+                                    android:padding="1dp"
+                                    tools:text="4" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="EDU"
+                            android:textAlignment="viewEnd"
+                            android:textSize="25sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@xml/back_arredondado"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textViewLocalEducacao"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:text='@{investigadorDTO.educacao}'
+                                android:textSize="25sp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_gravity="center"
+                                tools:text="80"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textViewLocalEducacaoMeio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:text='@{investigadorDTO.educacaoMeio}'
+                                    android:layout_gravity="center"
+                                    android:padding="1dp"
+                                    tools:text="16" />
+
+                                <TextView
+                                    android:id="@+id/textViewLocalEducacaoQuinto"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="5dp"
+                                    android:text='@{investigadorDTO.educacaoQuinto}'
+                                    android:layout_gravity="center"
+                                    android:padding="1dp"
+                                    tools:text="4" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="Movimento"
+                            android:textAlignment="center"
+                            android:textSize="11sp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@xml/back_lados_redondos"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textViewMovimento"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text='@{investigadorDTO.taxaMovimento}'
+                                android:textSize="25sp"
+                                tools:text="80"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@xml/back_black"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:fontFamily="@font/arbutus"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Dados Gerais"
+                    android:textColor="#FFFFFFFF" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pontos de Vida">
+
+                    <EditText
+                        android:id="@+id/editTextPontosVida"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text='@{investigadorDTO.pontosVida}'
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageViewSubtrairPontosVida"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="16dp"
+                        app:srcCompat="@drawable/ic_remove" />
+
+                    <SeekBar
+                        android:id="@+id/seekBarPontosVida"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:max="20"
+                        android:progress='@{Integer.valueOf(investigadorDTO.pontosVida)}'
+                        android:padding="16dp"/>
+
+                    <ImageView
+                        android:id="@+id/imageViewSomarPontosVida"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="16dp"
+                        app:srcCompat="@drawable/ic_add" />
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Sanidade">
+
+                    <EditText
+                        android:id="@+id/editTextSanidade"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text='@{investigadorDTO.sanidade}'
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageViewSubtrairSanidade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="16dp"
+                        app:srcCompat="@drawable/ic_remove" />
+
+                    <SeekBar
+                        android:id="@+id/seekBarSanidade"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:max="99"
+                        android:progress='@{Integer.valueOf(investigadorDTO.sanidade)}'
+                        android:padding="16dp"/>
+
+                    <ImageView
+                        android:id="@+id/imageViewSomarSanidade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="16dp"
+                        app:srcCompat="@drawable/ic_add" />
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pontos de Sorte">
+
+                    <EditText
+                        android:id="@+id/editTextPontosSorte"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text='@{investigadorDTO.sorte}'
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageViewSubtrairPontosSorte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="16dp"
+                        app:srcCompat="@drawable/ic_remove" />
+
+                    <SeekBar
+                        android:id="@+id/seekBarPontosSorte"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:max="99"
+                        android:progress='@{Integer.valueOf(investigadorDTO.sorte)}'
+                        android:padding="16dp"/>
+
+                    <ImageView
+                        android:id="@+id/imageViewSomarPontosSorte"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="16dp"
+                        app:srcCompat="@drawable/ic_add" />
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pontos de Magia">
+
+                    <EditText
+                        android:id="@+id/editTextMagia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:enabled="false"
+                        android:text='@{investigadorDTO.magia}'
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageViewSubtrairMagia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="16dp"
+                        app:srcCompat="@drawable/ic_remove" />
+
+                    <SeekBar
+                        android:id="@+id/seekBarMagia"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:max="24"
+                        android:progress='@{Integer.valueOf(investigadorDTO.magia)}'
+                        android:padding="16dp"/>
+
+                    <ImageView
+                        android:id="@+id/imageViewSomarMagia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="16dp"
+                        app:srcCompat="@drawable/ic_add" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@xml/back_black"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:fontFamily="@font/arbutus"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Dinheiro e Recursos"
+                android:textColor="#FFFFFFFF" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nível de Gastos">
+
+                    <EditText
+                        android:id="@+id/editTextNivelGastos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{investigadorDTO.nivelGastos}'
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Valor em Dinheiro">
+
+                    <EditText
+                        android:id="@+id/editTextDinheiro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{investigadorDTO.dinheiro}'
+                        android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Patrimônio">
+
+                    <EditText
+                        android:id="@+id/editTextPatrimonio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{investigadorDTO.patrimonio}'
+                        android:inputType="textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@xml/back_black"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:fontFamily="@font/arbutus"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="Antecedentes"
+                    android:textColor="#FFFFFFFF" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Descrição Pessoal">
+
+                    <EditText
+                        android:id="@+id/editTextDescricaoPessoal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{investigadorDTO.descricaoPessoal}'
+                        android:inputType="textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ideologia/Crenças">
+
+                    <EditText
+                        android:id="@+id/editTextIdeologia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{investigadorDTO.ideologia}'
+                        android:inputType="textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pessoas Significativas">
+
+                    <EditText
+                        android:id="@+id/editTextPessoasSignificativas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{investigadorDTO.pessoasSignificativas}'
+                        android:inputType="textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Locais Impactantes">
+
+                    <EditText
+                        android:id="@+id/editTextLocaisImpactantes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{investigadorDTO.locaisImpactantes}'
+                        android:inputType="textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pertences Queridos">
+
+                    <EditText
+                        android:id="@+id/editTextPertencesQueridos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{investigadorDTO.pertencesQueridos}'
+                        android:inputType="textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Características">
+
+                    <EditText
+                        android:id="@+id/editTextCaracteristicas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{investigadorDTO.caracteristicas}'
+                        android:inputType="textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ferimentos e Cicatrizes">
+
+                    <EditText
+                        android:id="@+id/editTextFerimentosCicatrizes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{investigadorDTO.ferimentosCicratrizes}'
+                        android:inputType="textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Fobias e Manias">
+
+                    <EditText
+                        android:id="@+id/editTextFobiasManias"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{investigadorDTO.fobiasManias}'
+                        android:inputType="textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tomos Arcanos, Feitiços e Artefatos">
+
+                    <EditText
+                        android:id="@+id/editTextTomosFeiticosArtefatos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{investigadorDTO.tomosFeiticosArtefatos}'
+                        android:inputType="textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Encontros com Entidades Estranhas">
+
+                    <EditText
+                        android:id="@+id/editTextEncontros"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@{investigadorDTO.encontros}'
+                        android:inputType="textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>
